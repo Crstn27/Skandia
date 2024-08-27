@@ -1,0 +1,16 @@
+.back-container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.mat-progress-spinner circle, .mat-spinner circle {
+  stroke: #00C83C;
+}

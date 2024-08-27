@@ -1,0 +1,30 @@
+<!-- <div>{{ dataCard().nameProduct }}</div>
+<div>{{ dataCard().balanceProduct}}</div>
+<div>{{ dataCard().detaildProduct}}</div>
+<div>{{ dataCard().numberProduct}}</div> -->
+
+<mat-card class="tarjeta-objetivo">
+  <mat-card-header>
+    <mat-card-title>{{ dataCard().nameProduct }}</mat-card-title>
+    <mat-card-subtitle>#{{ dataCard().numberProduct }}</mat-card-subtitle>
+  </mat-card-header>
+  <hr>
+  <mat-card-content>
+    <div class="summary">
+      <p>Ya cuentas con:</p>
+      <span class="saldo">${{ dataCard().balanceProduct}}</span>
+    </div>
+    <div class="container-description">
+      <span>
+        <img src="../../../../../../assets/images/Trofeo.svg" alt="">
+      </span>
+      <p>{{ dataCard().detaildProduct}}</p>
+
+    </div>
+
+  </mat-card-content>
+  <mat-checkbox class="check" checked color="tertiary-checkbox"></mat-checkbox>
+  <!-- <div class="check">
+    <input type="checkbox">
+  </div> -->
+</mat-card>

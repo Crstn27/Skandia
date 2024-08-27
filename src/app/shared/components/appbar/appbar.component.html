@@ -1,0 +1,51 @@
+<mat-toolbar color="primary" >
+  <button mat-icon-button class="btn-menu" aria-label="Menu" (click)="sidenav.toggle()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <img  class="logo-skandia" src="../../../../assets/images/Group 123.svg" alt="Skandia">
+  <span class="title-fpx">Plan Financiero Digital - FPX</span>
+  <span class="spacer"></span>
+  <button mat-icon-button class="icon" aria-label="Tu Financial Planner">
+    <img src="../../../../assets/images/Happy.svg" alt="Skandia" >
+  </button>
+  <a href="">Tu Financial Planner</a>
+  <button mat-icon-button class="icon" aria-label="Aportes">
+    <img src="../../../../assets/images/hand3.svg" alt="Skandia" >
+  </button>
+  <a href="">Aportes</a>
+  <button mat-icon-button class="icon-info" aria-label="Aportes">
+    <img src="../../../../assets/images/comp faq.svg" alt="Skandia" >
+  </button>
+  <!--
+  <button mat-icon-button class="example-icon" aria-label="Notificaciones">
+    <mat-icon>notifications</mat-icon>
+    <mat-badge color="warn">3</mat-badge>
+  </button> -->
+</mat-toolbar>
+
+<mat-sidenav-container >
+  <mat-sidenav #sidenav opened mode="side">
+    <mat-nav-list>
+      <mat-list-item
+        *ngFor="let item of sidebarItems; let first = first"
+        (click)="sidenav.toggle()"
+      >
+        <div class="item-menu" [ngClass]="{active: first}">
+          <button mat-icon-button [ngClass]="{active: first}">
+            <mat-icon>{{ item.icon }}</mat-icon>
+          </button>
+          <span [ngClass]="{active: first}">{{ item.label }}</span>
+
+        </div>
+      </mat-list-item>
+
+    </mat-nav-list>
+  </mat-sidenav>
+</mat-sidenav-container>
+
+<div class="menu-collapsed">
+  <button (click)="sidenav.toggle()">
+    <mat-icon>home</mat-icon>
+  </button>
+</div>
+

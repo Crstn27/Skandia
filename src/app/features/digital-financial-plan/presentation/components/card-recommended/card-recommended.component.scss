@@ -1,0 +1,29 @@
+mat-card {
+  width: 350px;
+  height: 400px;
+  background-image: url("../../../../../../assets/images/image-card-recommend.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-bottom: 4px solid #FF9460;
+  position: relative;
+}
+button {
+  height: 36px;
+  position: absolute;
+  top: 33%;
+  left: 12%;
+  background-color: #00C83C;
+  border-radius: 25px;
+  align-content: center;
+  border: none;
+  padding: 0 15px;
+}
+
+a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFFFFF;
+}

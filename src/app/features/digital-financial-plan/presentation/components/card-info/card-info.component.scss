@@ -1,0 +1,85 @@
+.tarjeta-objetivo {
+  margin: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  background-color: #FFFFFF;
+  flex: 0 0 auto;
+  height: 400px;
+  width: 350px;
+  display: flex;
+  gap: 25px;
+  border-bottom: 4px solid #63AABC;
+}
+
+.saldo {
+  font-weight: bold;
+  color: #00C83C;
+}
+
+.check {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  border-radius: 50%;
+}
+.check input {
+  border-color: #00C83C;
+}
+
+mat-card-header {
+  height: 100px;
+  align-items: center;
+}
+
+mat-card hr {
+  margin: 0;
+  width: 80%;
+  align-self: center;
+  border: none;
+  height: 2px;
+  background-color: #C4C7C4;
+}
+
+mat-card-subtitle {
+  color: #3F3F3F;
+}
+
+mat-card-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+mat-card-content .summary {
+  padding: 10px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+mat-card-content .summary p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.container-description {
+  background-color: #EDEDED;
+  text-align: center;
+  height: 90px;
+  margin-bottom: 16px !important;
+  position: relative;
+  align-content: center;
+  border-radius: 5px;
+}
+
+.container-description span {
+  position:absolute;
+  top: 0px;
+  right: 50%;
+  transform: translate(50%,-50%);
+}
+
+
+
+

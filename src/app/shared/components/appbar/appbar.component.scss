@@ -1,0 +1,95 @@
+
+.spacer {
+  display: flex;
+  flex: 1 1 auto;
+}
+
+button.btn-menu {
+  margin-right: 60px;
+}
+
+.logo-skandia {
+  height: 20px;
+}
+
+.title-fpx {
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: solid 2px gray;
+}
+
+.icon img {
+  height: 24px;
+}
+
+.icon-info img {
+  height: 32px;
+}
+
+
+mat-toolbar {
+  color: black;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  background-color: #FFFFFF;
+}
+
+mat-toolbar button, a {
+  color : #00C83C;
+  font-weight: bold;
+}
+
+
+mat-sidenav-container {
+  height: calc(100vh - 80px);
+  position: absolute;
+  display: flex;
+  right: 0;
+  top: 80px;
+  bottom: 0;
+  left: 0;
+  background-color: transparent;
+  width: fit-content;
+  z-index: 3;
+}
+mat-sidenav {
+  width: 250px;
+  min-width: 50px;
+  background-color: #E2E2E2;
+  box-shadow: var(--mat-sidenav-container-elevation-shadow);
+}
+
+mat-list-item {
+  padding: 0px;
+}
+
+mat-list-item span, button{
+  cursor: pointer;
+  color: #3F3F3F;
+}
+
+.item-menu {
+  display: flex;
+  align-items: center;
+  opacity: 1;
+}
+
+.active, .menu-collapsed button {
+  background-color: #00C83C;
+  color: #FFFFFF !important;
+
+}
+
+.menu-collapsed {
+  position: absolute;
+  height: calc(100% - 80px);
+  width: 50px;
+  background-color: #E2E2E2;
+}
+.menu-collapsed button {
+  border: none;
+  width: 50px;
+  height: 50px;
+}
+

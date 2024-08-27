@@ -1,0 +1,69 @@
+<div class="main-container">
+    <shared-appbar>
+    </shared-appbar>
+
+    <div class="container">
+
+      <div class="header">
+        <div class="btn-home">
+          <img src="../../../../../assets/images/home.svg" alt="home">
+          <a href="#">Ir al inicio</a>
+        </div>
+      </div>
+
+      <div class="container-body">
+        <div class="container-card-objective">
+          <h2>¡Tu objetivo ha sido agregado exitosamente!</h2>
+          <p>¡Te hemos enviado un correo con la notificación!</p>
+          <app-review-objective></app-review-objective>
+        </div>
+
+        <div class="container-info">
+          <h1>¡Vamos por esos <strong>$6.000.000</strong> para <strong>Conocer a mi sobrino</strong> !</h1>
+          <p>¡A través de tus productos y nuestros rendimientos podremos lograrlo!
+          </p>
+          <strong>
+            Asocia tus productos o adquiere uno nuevo.
+            <img src="../../../../../assets/images/icon-more-info.svg" alt="more info">
+          </strong>
+        </div>
+
+        <div class="container-cards">
+          <button class="prev" (click)="scrollCarousel('prev')"  [ngClass]="{ disabled: isScrollLeftDisabled() }">
+            <!-- <img src="../../../../../assets/images/prev.svg" alt="prev"> -->
+            <mat-icon>chevron_left</mat-icon>
+          </button>
+          <div #carousel class="wrapper">
+            <div  class="carousel">
+                <digital-financial-plan-card-info
+                  *ngFor="let item of signalData().listCard"
+                  [dataCard]="item"
+                >
+                </digital-financial-plan-card-info>
+                <app-card-recommended></app-card-recommended>
+            </div>
+
+          </div>
+
+          <button class="next" (click)="scrollCarousel('next')"  [ngClass]="{ disabled: isScrollRightDisabled() }">
+            <!-- <img src="../../../../../assets/images/next.svg" alt="next"> -->
+            <mat-icon>chevron_right</mat-icon>
+          </button>
+        </div>
+
+        <div class="associate-objective">
+          <button>
+            Asociar objetivo
+          </button>
+        </div>
+
+        <shared-footer></shared-footer>
+      </div>
+    </div>
+
+
+</div>
+
+<shared-loading *ngIf="isLoading()"></shared-loading>
+
+<shared-alert *ngIf="isError()" (isOpen)="isError.set(false)"></shared-alert>
